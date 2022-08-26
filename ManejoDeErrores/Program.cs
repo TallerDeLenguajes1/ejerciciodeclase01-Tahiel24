@@ -13,11 +13,19 @@ namespace ManejoDeErrores
             list[3] = "Wednesday";
             list[4] = "Thursday";
 
-            for (int i = 0; i <= 5; i++)
+            try
             {
-                Console.WriteLine(list[i].ToString());
+                for (int i = 0; i <= 5; i++)
+                {
+                    Console.WriteLine(list[i].ToString());
+                }
+                Console.ReadLine();
             }
-            Console.ReadLine();
+            catch (IndexOutOfRangeException)
+            {
+                Console.WriteLine("\nSe ha excedido el rango del arreglo");
+            }
+
         }
     }
 }
